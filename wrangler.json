@@ -1,0 +1,5 @@
+{
+  "name": "mdl",
+  "compatibility_date": "2025-09-01",
+  "main": "./main.ts"
+}

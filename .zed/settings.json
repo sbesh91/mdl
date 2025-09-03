@@ -15,8 +15,7 @@
         "!typescript-language-server",
         "!vtsls",
         "!eslint"
-      ],
-      "formatter": "language_server"
+      ]
     },
     "TSX": {
       "language_servers": [
@@ -24,8 +23,7 @@
         "!typescript-language-server",
         "!vtsls",
         "!eslint"
-      ],
-      "formatter": "language_server"
+      ]
     }
   }
 }

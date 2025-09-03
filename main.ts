@@ -28,3 +28,9 @@ app.use(exampleLoggerMiddleware);
 
 // Include file-system based routes here
 app.fsRoutes();
+
+// export default {
+//   fetch() {
+//     return new Response(`Running in ${navigator.userAgent}!`);
+//   },
+// };
