@@ -12,7 +12,7 @@
       "tags": ["fresh", "recommended"]
     }
   },
-  "exclude": ["**/_fresh/*"],
+  "exclude": ["**/_fresh/*", ".zed", ".git"],
   "imports": {
     "@cloudflare/vite-plugin": "npm:@cloudflare/vite-plugin@^1.12.2",
     "fresh": "jsr:@fresh/core@^2.0.0-beta.3",

@@ -9,7 +9,7 @@ export default define.page(function Home(ctx) {
   console.log("Shared value " + ctx.state.shared);
 
   return (
-    <div class="px-4 py-8 mx-auto fresh-gradient min-h-screen">
+    <div class="body px-4 py-8 mx-auto fresh-gradient min-h-screen">
       <Head>
         <title>Fresh counter</title>
       </Head>
@@ -26,6 +26,8 @@ export default define.page(function Home(ctx) {
           Try updating this message in the
           <code class="mx-2">./routes/index.tsx</code> file, and refresh.
         </p>
+        <strong>hello world</strong>
+        <br />
         <Counter count={count} />
       </div>
     </div>

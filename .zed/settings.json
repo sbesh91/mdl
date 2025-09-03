@@ -23,7 +23,10 @@
         "!typescript-language-server",
         "!vtsls",
         "!eslint"
-      ]
+      ],
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
     }
   }
 }
