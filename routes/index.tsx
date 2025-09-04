@@ -9,7 +9,7 @@ export default define.page(function Home(ctx) {
   console.log("Shared value " + ctx.state.shared);
 
   return (
-    <div class="body px-4 py-8 mx-auto fresh-gradient min-h-screen">
+    <div class="body px-4 py-8 mx-auto fresh-gradient">
       <Head>
         <title>Fresh counter</title>
       </Head>

@@ -8,7 +8,7 @@ export const Link = ({
   children: ComponentChild;
 }) => {
   return (
-    <a href={href} className="text-blue-500 hover:underline">
+    <a href={href} className="px-4 py-2 rounded">
       {children}
     </a>
   );

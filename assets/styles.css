@@ -9,3 +9,32 @@
         rgb(254, 249, 195)
     );
 }
+
+a {
+    transition: 300ms ease-in;
+    transition-property: color, background-color, border-color;
+
+    &[data-current="true"] {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: #0069d9;
+        border-color: #0062cc;
+    }
+
+    &:focus {
+        color: #fff;
+        background-color: #0062cc;
+        border-color: #005cbf;
+    }
+
+    &:active {
+        color: #fff;
+        background-color: #005cbf;
+        border-color: #0051b8;
+    }
+}

@@ -11,8 +11,10 @@ export default define.page(function App({ Component }) {
         <title>mdl</title>
       </head>
       <body f-client-nav>
-        <Link href="/test">Test</Link>
-        <Link href="/">Home</Link>
+        <div class="flex p-2 gap-2">
+          <Link href="/test">Test</Link>
+          <Link href="/">Home</Link>
+        </div>
         <Partial name="body">
           <Component />
         </Partial>
