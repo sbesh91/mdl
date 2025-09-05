@@ -14,7 +14,7 @@ a {
     transition: 300ms ease-in;
     transition-property: color, background-color, border-color;
 
-    &[data-current="true"] {
+    &[aria-current="page"] {
         color: #fff;
         background-color: #007bff;
         border-color: #007bff;
