@@ -9,6 +9,14 @@
     }
   },
   "languages": {
+    "JavaScript": {
+      "language_servers": [
+        "deno",
+        "!typescript-language-server",
+        "!vtsls",
+        "!eslint"
+      ]
+    },
     "TypeScript": {
       "language_servers": [
         "deno",
@@ -23,10 +31,7 @@
         "!typescript-language-server",
         "!vtsls",
         "!eslint"
-      ],
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+      ]
     }
   }
 }
