@@ -12,6 +12,7 @@
     "JavaScript": {
       "language_servers": [
         "deno",
+        "tailwindcss-language-server",
         "!typescript-language-server",
         "!vtsls",
         "!eslint"
@@ -20,6 +21,7 @@
     "TypeScript": {
       "language_servers": [
         "deno",
+        "tailwindcss-language-server",
         "!typescript-language-server",
         "!vtsls",
         "!eslint"
@@ -28,6 +30,7 @@
     "TSX": {
       "language_servers": [
         "deno",
+        "tailwindcss-language-server",
         "!typescript-language-server",
         "!vtsls",
         "!eslint"
