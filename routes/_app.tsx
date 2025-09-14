@@ -1,6 +1,4 @@
-import { Partial } from "fresh/runtime";
 import { define } from "../utils.ts";
-import { Link } from "../components/Link.tsx";
 
 export default define.page(function App({ Component }) {
   return (
@@ -10,14 +8,8 @@ export default define.page(function App({ Component }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>mdl</title>
       </head>
-      <body f-client-nav>
-        <div class="flex p-2 gap-2">
-          <Link href="/test">Test</Link>
-          <Link href="/">Home</Link>
-        </div>
-        <Partial name="body">
-          <Component />
-        </Partial>
+      <body>
+        <Component />
       </body>
     </html>
   );
