@@ -1,19 +1,116 @@
-<svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path
-    d="M34.092 8.845C38.929 20.652 34.092 27 30 30.5c1 3.5-2.986 4.222-4.5 2.5-4.457 1.537-13.512 1.487-20-5C2 24.5 4.73 16.714 14 11.5c8-4.5 16-7 20.092-2.655Z"
-    fill="#FFDB1E"
-  />
-  <path
-    d="M14 11.5c6.848-4.497 15.025-6.38 18.368-3.47C37.5 12.5 21.5 22.612 15.5 25c-6.5 2.587-3 8.5-6.5 8.5-3 0-2.5-4-5.183-7.75C2.232 23.535 6.16 16.648 14 11.5Z"
-    fill="#fff"
-    stroke="#FFDB1E"
-  />
-  <path
-    d="M28.535 8.772c4.645 1.25-.365 5.695-4.303 8.536-3.732 2.692-6.606 4.21-7.923 4.83-.366.173-1.617-2.252-1.617-1 0 .417-.7 2.238-.934 2.326-1.365.512-4.223 1.29-5.835 1.29-3.491 0-1.923-4.754 3.014-9.122.892-.789 1.478-.645 2.283-.645-.537-.773-.534-.917.403-1.546C17.79 10.64 23 8.77 25.212 8.42c.366.014.82.35.82.629.41-.14 2.095-.388 2.503-.278Z"
-    fill="#FFE600"
-  />
-  <path
-    d="M14.297 16.49c.985-.747 1.644-1.01 2.099-2.526.566.121.841-.08 1.29-.701.324.466 1.657.608 2.453.701-.715.451-1.057.852-1.452 2.106-1.464-.611-3.167-.302-4.39.42Z"
-    fill="#fff"
-  />
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main Gradients -->
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C94B7D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D85A7A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0975E;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="grad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0975E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D85A7A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C94B7D;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="grad3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E8744D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D85A7A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E05C8D;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Highlight Gradients -->
+    <linearGradient id="highlight1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB8D1;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFC799;stop-opacity:0" />
+    </linearGradient>
+
+    <linearGradient id="highlight2" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFDAE5;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#FFE0C4;stop-opacity:0" />
+    </linearGradient>
+
+    <!-- Radial highlights for sparkle -->
+    <radialGradient id="sparkle">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#FFD5E5;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#FFC799;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Enhanced glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Strong outer glow filter -->
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="5" result="blur1"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base Shadow/Glow Layer -->
+  <g opacity="0.18">
+    <polygon points="200,65 285,145 345,205 285,265 200,345 115,265 55,205 115,145" fill="#8B4570" filter="url(#strongGlow)"/>
+  </g>
+
+  <!-- Main Structure -->
+  <g filter="url(#glow)">
+    <!-- Top diamond -->
+    <polygon points="200,50 285,135 200,155 115,135" fill="url(#grad1)"/>
+
+    <!-- Left upper facet -->
+    <polygon points="115,135 55,195 135,240 200,155" fill="url(#grad2)"/>
+
+    <!-- Right upper facet -->
+    <polygon points="285,135 345,195 265,240 200,155" fill="url(#grad1)"/>
+
+    <!-- Center diamond -->
+    <polygon points="200,155 265,240 200,285 135,240" fill="url(#grad3)"/>
+
+    <!-- Left lower facet -->
+    <polygon points="135,240 55,195 115,265 200,285" fill="url(#grad2)"/>
+
+    <!-- Right lower facet -->
+    <polygon points="265,240 345,195 285,265 200,285" fill="url(#grad1)"/>
+
+    <!-- Bottom diamond -->
+    <polygon points="200,285 115,265 200,350 285,265" fill="url(#grad3)"/>
+  </g>
+
+  <!-- Highlight Overlays -->
+  <g opacity="0.5">
+    <polygon points="200,50 285,135 200,155" fill="url(#highlight1)"/>
+    <polygon points="200,155 265,240 200,285" fill="url(#highlight2)"/>
+    <polygon points="285,135 345,195 265,240 200,155" fill="url(#highlight1)"/>
+  </g>
+
+  <!-- Internal Structure Lines -->
+  <g opacity="0.3" stroke-linecap="round" filter="url(#glow)">
+    <line x1="200" y1="50" x2="200" y2="350" stroke="url(#grad1)" stroke-width="3"/>
+    <line x1="115" y1="135" x2="285" y2="265" stroke="url(#grad2)" stroke-width="2"/>
+    <line x1="285" y1="135" x2="115" y2="265" stroke="url(#grad3)" stroke-width="2"/>
+    <line x1="55" y1="195" x2="345" y2="195" stroke="url(#grad1)" stroke-width="2"/>
+  </g>
+
+  <!-- Strong Outer Glow -->
+  <path d="M 200,50 L 285,135 L 345,195 L 285,265 L 200,350 L 115,265 L 55,195 L 115,135 Z"
+        fill="none" stroke="url(#grad1)" stroke-width="6" stroke-linejoin="round" opacity="0.35" filter="url(#strongGlow)"/>
+
+  <!-- Medium Outer Glow -->
+  <path d="M 200,50 L 285,135 L 345,195 L 285,265 L 200,350 L 115,265 L 55,195 L 115,135 Z"
+        fill="none" stroke="url(#grad1)" stroke-width="4" stroke-linejoin="round" opacity="0.35"/>
+
+  <!-- Sharp Edge Definition -->
+  <path d="M 200,50 L 285,135 L 345,195 L 285,265 L 200,350 L 115,265 L 55,195 L 115,135 Z"
+        fill="none" stroke="url(#grad1)" stroke-width="2" stroke-linejoin="round" opacity="0.9" filter="url(#glow)"/>
 </svg>
