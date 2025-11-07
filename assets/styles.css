@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+    --font-sans: NotoSans, sans-serif;
+    --font-display: NotoSansDisplay, sans-serif;
+
     --color-primary: var(--color-dark);
 
     /* Primary Gradients*/
@@ -144,7 +147,7 @@
 
 @utility text-foil {
     background: var(--background-image-gradient-foil);
-    @apply text-transparent bg-clip-text font-bold;
+    @apply text-transparent bg-clip-text font-bold leading-[125%];
 }
 
 @utility gradient-blur {
@@ -175,13 +178,21 @@
     animation: gradient-shift 15s ease infinite;
 }
 
+@font-face {
+    font-family: NotoSans;
+    font-display: swap;
+    src: url("/fonts/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+    font-family: NotoSansDisplay;
+    font-display: swap;
+    src: url("/fonts/Noto_Sans_Display/NotoSansDisplay-VariableFont_wdth,wght.ttf");
+}
+
 @view-transition {
     navigation: auto;
 }
-
-/*::view-transition-group(root) {
-    animation: none;
-}*/
 
 :root {
     view-transition-name: test;
