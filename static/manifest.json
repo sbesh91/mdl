@@ -1,0 +1,46 @@
+{
+  "name": "MDL",
+  "short_name": "MDL",
+  "description": "MDL Web Application",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2b2b2d",
+  "theme_color": "#2b2b2d",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": [],
+  "shortcuts": [
+    {
+      "name": "Home",
+      "short_name": "Home",
+      "description": "Go to home page",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ]
+}
