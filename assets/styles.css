@@ -59,7 +59,6 @@
     --gradient-peach: rgba(255, 140, 105, 0.6);
     --gradient-violet-soft: rgba(186, 85, 211, 0.5);
     --gradient-rose: rgba(255, 192, 203, 0.4);
-    --gradient-cream: #fff9f5;
 
     /* Soft blurred gradient backgrounds */
     --background-image-gradient-blur:
@@ -114,7 +113,8 @@
             circle at 75% 55%,
             var(--gradient-blush) 0%,
             transparent 45%
-        );
+        ),
+        var(--gradient-base);
 
     --background-image-gradient-soft:
         radial-gradient(
@@ -142,7 +142,7 @@
             var(--gradient-rose) 0%,
             transparent 50%
         ),
-        var(--gradient-cream);
+        var(--gradient-base);
 }
 
 @utility text-foil {
@@ -155,17 +155,7 @@
 }
 
 @utility gradient-mesh {
-    position: relative;
-    background: var(--gradient-base);
-    overflow: hidden;
-
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: var(--background-image-gradient-mesh);
-        filter: blur(60px);
-    }
+    background: var(--background-image-gradient-mesh);
 }
 
 @utility gradient-soft {
