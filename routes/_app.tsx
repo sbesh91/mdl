@@ -15,7 +15,7 @@ export default define.page(function App({ Component }) {
 
         <title>mdl</title>
       </head>
-      <body class="h-dvh overflow-auto">
+      <body class="h-dvh overflow-auto bg-primary">
         <Component />
       </body>
     </html>

@@ -27,7 +27,7 @@
     --color-orange: #fe5000;
 
     /* Text */
-    --color-heading: #888b8d;
+    --color-heading: var(--color-lightest);
 
     /* Pallete */
     --color-white: #fff;
@@ -81,11 +81,6 @@
             circle at 40% 70%,
             var(--gradient-violet) 0%,
             transparent 50%
-        ),
-        linear-gradient(
-            135deg,
-            var(--gradient-base) 0%,
-            var(--gradient-base-light) 100%
         );
 
     --background-image-gradient-mesh:
@@ -113,8 +108,7 @@
             circle at 75% 55%,
             var(--gradient-blush) 0%,
             transparent 45%
-        ),
-        var(--gradient-base);
+        );
 
     --background-image-gradient-soft:
         radial-gradient(
@@ -141,8 +135,7 @@
             ellipse at 80% 60%,
             var(--gradient-rose) 0%,
             transparent 50%
-        ),
-        var(--gradient-base);
+        );
 }
 
 @utility text-foil {
@@ -166,6 +159,49 @@
     background: var(--background-image-gradient-blur);
     background-size: 400% 400%;
     animation: gradient-shift 15s ease infinite;
+}
+
+@utility gradient-card {
+    position: relative;
+    overflow: visible;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -60%;
+        background: var(--background-image-gradient-blur);
+        filter: blur(40px);
+        z-index: -1;
+    }
+}
+
+@utility gradient-card-soft {
+    position: relative;
+    overflow: visible;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -80%;
+        background: var(--background-image-gradient-soft);
+        filter: blur(50px);
+        z-index: -1;
+    }
+}
+
+@utility gradient-card-mesh {
+    position: relative;
+    backdrop-filter: blur(10px);
+    overflow: visible;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -100%;
+        background: var(--background-image-gradient-mesh);
+        filter: blur(60px);
+        z-index: -1;
+    }
 }
 
 @font-face {
