@@ -1,0 +1,6 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "mdl",
+  "compatibility_date": "2025-11-09",
+  "main": "./server.js",
+}
