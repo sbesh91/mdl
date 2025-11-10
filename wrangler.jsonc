@@ -3,4 +3,11 @@
   "name": "mdl",
   "compatibility_date": "2025-11-09",
   "main": "./server.js",
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "mdl.sbesh.com",
+      "custom_domain": true,
+    },
+  ],
 }
