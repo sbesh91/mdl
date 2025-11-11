@@ -6,28 +6,17 @@
     view-transition-name: side;
 }
 
-::view-transition-group(main) {
-    animation-duration: 800ms;
-}
-
+::view-transition-group(main),
 ::view-transition-group(side) {
     animation-duration: 800ms;
 }
 
-::view-transition-old(side) {
-    animation: none;
-    display: none;
-}
-
-::view-transition-old(main) {
-    animation: none;
-    display: none;
-}
-
-::view-transition-new(side) {
-    animation: none;
-}
-
+::view-transition-old(side),
+::view-transition-new(side),
+::view-transition-old(main),
 ::view-transition-new(main) {
-    animation: none;
+    height: 100%;
+    object-fit: none;
+    overflow: clip;
+    object-position: left;
 }
