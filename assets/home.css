@@ -1,0 +1,29 @@
+#main {
+    view-transition-name: main;
+}
+
+#side {
+    view-transition-name: side;
+}
+
+::view-transition-old(side) {
+    animation: none;
+    display: none;
+}
+
+::view-transition-old(main) {
+    animation: none;
+    display: none;
+}
+
+::view-transition-new(side) {
+    animation: none;
+    animation-duration: 600ms;
+    animation-timing-function: ease-in;
+}
+
+::view-transition-new(main) {
+    animation: none;
+    animation-duration: 600ms;
+    animation-timing-function: ease-in;
+}

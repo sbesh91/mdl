@@ -2,15 +2,15 @@ import { cva, VariantProps } from "class-variance-authority";
 import { HTMLAttributes } from "preact";
 import { cn } from "../helpers/cn.ts";
 
-const headingVariants = cva("text-heading font-display", {
+const headingVariants = cva("text-heading font-light font-display", {
   variants: {
     variant: {
-      h1: "text-3xl lowercase",
-      h2: "text-2xl text-medium",
-      h3: "text-xl",
-      h4: "text-lg",
-      h5: "text-base",
-      h6: "text-sm",
+      h1: "text-4xl lowercase",
+      h2: "text-3xl text-medium",
+      h3: "text-2xl",
+      h4: "text-xl",
+      h5: "text-lg",
+      h6: "text-base",
     },
   },
   defaultVariants: {

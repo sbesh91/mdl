@@ -24,12 +24,14 @@ type MainProps = {
 
 type Props = (AnchorProps | MainProps) & VariantProps<typeof sideVariants>;
 
-export default function Main(props: Props) {
+export default function Main({ as, ...props }: Props) {
   // deno-lint-ignore no-explicit-any
-  const Wrapper = props.as as any;
+  const Wrapper = as as any;
+
   return (
     <Wrapper
       {...props}
+      id="main"
       class={cn(sideVariants({ variant: props.variant, class: props.class }))}
     >
       <Heading>Music</Heading>

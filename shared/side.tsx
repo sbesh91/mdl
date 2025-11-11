@@ -26,12 +26,14 @@ type AsideProps = {
 
 type Props = (AnchorProps | AsideProps) & VariantProps<typeof sideVariants>;
 
-export default function Side(props: Props) {
+export default function Side({ as, ...props }: Props) {
   // deno-lint-ignore no-explicit-any
-  const Wrapper = props.as as any;
+  const Wrapper = as as any;
+
   return (
     <Wrapper
       {...props}
+      id="side"
       class={cn(sideVariants({ variant: props.variant, class: props.class }))}
     >
       <section>
