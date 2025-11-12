@@ -3,7 +3,7 @@ import { Heading } from "../components/heading.tsx";
 import { AnchorHTMLAttributes, HTMLAttributes } from "preact";
 import { cn } from "../helpers/cn.ts";
 
-const sideVariants = cva("grid gap-4 origin-top-right", {
+const mainVariants = cva("grid gap-4 origin-top-right vt-name-[main]", {
   variants: {
     variant: {
       normal: "py-10 ms-20 z-10 relative",
@@ -22,27 +22,46 @@ type MainProps = {
   as: "main";
 } & HTMLAttributes<HTMLElement>;
 
-type Props = (AnchorProps | MainProps) & VariantProps<typeof sideVariants>;
+type Props = (AnchorProps | MainProps) & VariantProps<typeof mainVariants>;
 
 export default function Main({ as, ...props }: Props) {
   // deno-lint-ignore no-explicit-any
   const Wrapper = as as any;
+  const interactive = props.variant !== "shrink";
 
   return (
     <Wrapper
       {...props}
       id="main"
-      class={cn(sideVariants({ variant: props.variant, class: props.class }))}
+      class={cn(mainVariants({ variant: props.variant, class: props.class }))}
     >
-      <Heading>Music</Heading>
-      <Heading>Videos</Heading>
-      <Heading>Pictures</Heading>
-      <Heading>Radio</Heading>
-      <Heading>Marketplace</Heading>
-      <Heading>Social</Heading>
-      <Heading>Podcasts</Heading>
-      <Heading>Internet</Heading>
-      <Heading>Settings</Heading>
+      <Heading interactive={interactive} href="/music">
+        <span class="inline-block vt-name-[header]">Music</span>
+      </Heading>
+      <Heading interactive={interactive} href="/videos">
+        Videos
+      </Heading>
+      <Heading interactive={interactive} href="/pictures">
+        Pictures
+      </Heading>
+      <Heading interactive={interactive} href="/radio">
+        Radio
+      </Heading>
+      <Heading interactive={interactive} href="/marketplace">
+        Marketplace
+      </Heading>
+      <Heading interactive={interactive} href="/social">
+        Social
+      </Heading>
+      <Heading interactive={interactive} href="/podcasts">
+        Podcasts
+      </Heading>
+      <Heading interactive={interactive} href="/internet">
+        Internet
+      </Heading>
+      <Heading interactive={interactive} href="/settings">
+        Settings
+      </Heading>
     </Wrapper>
   );
 }

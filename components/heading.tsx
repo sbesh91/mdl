@@ -2,32 +2,49 @@ import { cva, VariantProps } from "class-variance-authority";
 import { HTMLAttributes } from "preact";
 import { cn } from "../helpers/cn.ts";
 
-const headingVariants = cva("text-heading font-light font-display", {
-  variants: {
-    variant: {
-      h1: "text-4xl lowercase",
-      h2: "text-3xl text-medium",
-      h3: "text-2xl",
-      h4: "text-xl",
-      h5: "text-lg",
-      h6: "text-base",
+const headingVariants = cva(
+  "text-heading font-light font-display origin-top-left",
+  {
+    variants: {
+      variant: {
+        h1: "text-7xl lowercase text-medium-foil",
+        h2: "text-4xl lowercase",
+        h3: "text-3xl text-medium",
+        h4: "text-2xl",
+        h5: "text-xl",
+        h6: "text-lg",
+      },
+    },
+    defaultVariants: {
+      variant: "h1",
     },
   },
-  defaultVariants: {
-    variant: "h1",
-  },
-});
+);
 
 type HeadingProps = HTMLAttributes<HTMLHeadingElement> &
-  VariantProps<typeof headingVariants>;
+  VariantProps<typeof headingVariants> & {
+    href?: string;
+    interactive?: boolean;
+  };
 
-export function Heading({ variant = "h1", ...props }: HeadingProps) {
-  const Comp = variant ?? "h1";
+export function Heading({
+  variant = "h2",
+  href,
+  interactive,
+  ...props
+}: HeadingProps) {
+  const Comp = variant ?? "h2";
 
-  return (
+  const instance = (
     <Comp
       {...props}
       class={cn(headingVariants({ variant, className: props.class }))}
     />
   );
+
+  if (interactive) {
+    return <a href={href}>{instance}</a>;
+  }
+
+  return instance;
 }

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "tailwindcss-view-transitions";
 
 @theme {
     --font-sans: NotoSans, sans-serif;

@@ -46,7 +46,9 @@
     "npm:preact@^10.27.2": "10.27.2",
     "npm:rollup@^4.50.0": "4.53.1",
     "npm:tailwind-merge@^3.4.0": "3.4.0",
+    "npm:tailwindcss-view-transitions@~0.1.1": "0.1.1_tailwindcss@4.1.17",
     "npm:tailwindcss@^4.1.17": "4.1.17",
+    "npm:vite@^7.1.4": "7.2.2_@types+node@24.2.0_picomatch@4.0.3",
     "npm:vite@^7.2.2": "7.2.2_@types+node@24.2.0_picomatch@4.0.3",
     "npm:wrangler@^4.47.0": "4.47.0_unenv@2.0.0-rc.24_workerd@1.20251109.0"
   },
@@ -105,7 +107,8 @@
         "npm:@babel/preset-react",
         "npm:@mjackson/node-fetch-server",
         "npm:@prefresh/vite",
-        "npm:rollup"
+        "npm:rollup",
+        "npm:vite@^7.1.4"
       ]
     },
     "@std/bytes@1.0.6": {
@@ -1732,6 +1735,12 @@
     "tailwind-merge@3.4.0": {
       "integrity": "sha512-uSaO4gnW+b3Y2aWoWfFpX62vn2sR3skfhbjsEnaBI81WD1wBLlHZe5sWf0AqjksNdYTbGBEd0UasQMT3SNV15g=="
     },
+    "tailwindcss-view-transitions@0.1.1_tailwindcss@4.1.17": {
+      "integrity": "sha512-YIiZAoYDSwcUC6kt/TD7knkOkiDyyQArUN3fgYAvrRIF7zzta7/olQM44z9zeuGRBMSWpkbP1slYH67gEMMIKA==",
+      "dependencies": [
+        "tailwindcss"
+      ]
+    },
     "tailwindcss@4.1.17": {
       "integrity": "sha512-j9Ee2YjuQqYT9bbRTfTZht9W/ytp5H+jJpZKiYdP/bpnXARAuELt9ofP0lPnmHjbga7SNQIxdTAXCmtKVYjN+Q=="
     },
@@ -1856,6 +1865,7 @@
       "npm:clsx@^2.1.1",
       "npm:preact@^10.27.2",
       "npm:tailwind-merge@^3.4.0",
+      "npm:tailwindcss-view-transitions@~0.1.1",
       "npm:tailwindcss@^4.1.17",
       "npm:vite@^7.2.2",
       "npm:wrangler@^4.47.0"

@@ -5,7 +5,7 @@ import { cn } from "../helpers/cn.ts";
 import Card from "../components/card.tsx";
 import { asset } from "fresh/runtime";
 
-const sideVariants = cva("grid gap-6 origin-top-left", {
+const sideVariants = cva("grid gap-6 origin-top-left vt-name-[side]", {
   variants: {
     variant: {
       normal: "py-10 me-20 z-10 relative",
@@ -37,19 +37,19 @@ export default function Side({ as, ...props }: Props) {
       class={cn(sideVariants({ variant: props.variant, class: props.class }))}
     >
       <section>
-        <Heading variant="h2">Playing</Heading>
+        <Heading variant="h3">Playing</Heading>
         <Card as="section" variant="playing">
           <img class="h-full w-full" src={asset("/logo.svg")} />
         </Card>
       </section>
       <section>
-        <Heading variant="h2">Pins</Heading>
+        <Heading variant="h3">Pins</Heading>
       </section>
       <section>
-        <Heading variant="h2">History</Heading>
+        <Heading variant="h3">History</Heading>
       </section>
       <section>
-        <Heading variant="h2">New</Heading>
+        <Heading variant="h3">New</Heading>
       </section>
     </Wrapper>
   );

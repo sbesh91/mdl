@@ -1,13 +1,6 @@
-#main {
-    view-transition-name: main;
-}
-
-#side {
-    view-transition-name: side;
-}
-
 ::view-transition-group(main),
-::view-transition-group(side) {
+::view-transition-group(side),
+::view-transition-group(header) {
     animation-duration: 400ms;
 }
 
@@ -19,4 +12,10 @@
     object-fit: none;
     overflow: clip;
     object-position: left;
+}
+
+::view-transition-old(header),
+::view-transition-new(header) {
+    object-fit: cover;
+    object-position: top left;
 }
