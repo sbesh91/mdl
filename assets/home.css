@@ -8,7 +8,7 @@
 
 ::view-transition-group(main),
 ::view-transition-group(side) {
-    animation-duration: 800ms;
+    animation-duration: 400ms;
 }
 
 ::view-transition-old(side),
