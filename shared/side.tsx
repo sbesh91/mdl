@@ -36,20 +36,28 @@ export default function Side({ as, ...props }: Props) {
       id="side"
       class={cn(sideVariants({ variant: props.variant, class: props.class }))}
     >
-      <section>
-        <Heading variant="h3">Playing</Heading>
+      <section class="vt-name-[playing]">
+        <Heading variant="h3">
+          <span>Playing</span>
+        </Heading>
         <Card as="section" variant="playing">
           <img class="h-full w-full" src={asset("/logo.svg")} />
         </Card>
       </section>
       <section>
-        <Heading variant="h3">Pins</Heading>
+        <Heading variant="h3">
+          <span class="inline-block vt-name-[pins]">Pins</span>
+        </Heading>
       </section>
       <section>
-        <Heading variant="h3">History</Heading>
+        <Heading variant="h3">
+          <span class="inline-block vt-name-[history]">History</span>
+        </Heading>
       </section>
       <section>
-        <Heading variant="h3">New</Heading>
+        <Heading variant="h3">
+          <span class="inline-block vt-name-[new]">New</span>
+        </Heading>
       </section>
     </Wrapper>
   );

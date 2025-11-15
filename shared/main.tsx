@@ -36,31 +36,31 @@ export default function Main({ as, ...props }: Props) {
       class={cn(mainVariants({ variant: props.variant, class: props.class }))}
     >
       <Heading interactive={interactive} href="/music">
-        <span class="inline-block vt-name-[header]">Music</span>
+        <span class="header inline-block vt-name-[music]">Music</span>
       </Heading>
       <Heading interactive={interactive} href="/videos">
-        Videos
+        <span class="inline-block vt-name-[videos]">Videos</span>
       </Heading>
       <Heading interactive={interactive} href="/pictures">
-        Pictures
+        <span class="inline-block vt-name-[pictures]">Pictures</span>
       </Heading>
       <Heading interactive={interactive} href="/radio">
-        Radio
+        <span class="inline-block vt-name-[radio]">Radio</span>
       </Heading>
       <Heading interactive={interactive} href="/marketplace">
-        Marketplace
+        <span class="inline-block vt-name-[marketplace]">Marketplace</span>
       </Heading>
       <Heading interactive={interactive} href="/social">
-        Social
+        <span class="inline-block vt-name-[social]">Social</span>
       </Heading>
       <Heading interactive={interactive} href="/podcasts">
-        Podcasts
+        <span class="inline-block vt-name-[podcasts]">Podcasts</span>
       </Heading>
       <Heading interactive={interactive} href="/internet">
-        Internet
+        <span class="inline-block vt-name-[internet]">Internet</span>
       </Heading>
       <Heading interactive={interactive} href="/settings">
-        Settings
+        <span class="inline-block vt-name-[settings]">Settings</span>
       </Heading>
     </Wrapper>
   );
