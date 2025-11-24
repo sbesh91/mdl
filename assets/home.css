@@ -1,35 +1,18 @@
-::view-transition-group(main),
-::view-transition-group(side) {
-    animation: none;
-}
-::view-transition-group(music),
-::view-transition-group(videos),
-::view-transition-group(pictures),
-::view-transition-group(radio),
-::view-transition-group(marketplace),
-::view-transition-group(social),
-::view-transition-group(podcasts),
-::view-transition-group(internet),
-::view-transition-group(settings),
-::view-transition-group(playing),
-::view-transition-group(pins),
-::view-transition-group(history),
-::view-transition-group(new) {
+::view-transition-group(*) {
     animation-duration: 400ms;
     animation-timing-function: linear;
 }
 
-/*namespace this with a class*/
-::view-transition-old(*),
-::view-transition-new(*) {
+/*::view-transition-old(.body),
+::view-transition-new(.body) {
     height: 100%;
     object-fit: none;
     overflow: clip;
     object-position: left;
-}
+}*/
 
-::view-transition-old(.header),
-::view-transition-new(.header) {
+::view-transition-old(*),
+::view-transition-new(*) {
     object-fit: cover;
     object-position: top left;
 }
